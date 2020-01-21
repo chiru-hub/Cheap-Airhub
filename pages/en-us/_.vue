@@ -680,7 +680,7 @@
                       <div style="display:flex;align-items:center">
                         <img
                           style="width: 50px;height: 100%;object-fit: contain;"
-                          src="~static/call-now.gif"
+                          src="~static/call-now.jpg"
                         />
                         <p class="flight__phone">+1-888-201-0212</p>
                       </div>
@@ -798,7 +798,7 @@
                   <div style="display:flex;align-items:center">
                     <img
                       style="width: 50px;height: 100%;object-fit: contain;"
-                      src="~static/call-now.gif"
+                      src="~static/call-now.jpg"
                     />
                     <p class="flight__phone">+1-888-201-0212</p>
                   </div>

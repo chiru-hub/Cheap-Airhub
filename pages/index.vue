@@ -825,7 +825,7 @@
         <div class="contact" style="width:100%">
           <div class="row">
             <div class="hide-on-med-and-down col s24 m24 l12 pic-call">
-              <a href="tel:1888-220-3565">
+              <a href="tel:1888-224-3071">
                 <h1>
                   <i class="fa fa-phone-square"></i>&nbsp;CALL NOW
                 </h1>

@@ -993,7 +993,7 @@ export default {
     isInternationDep: 0,
     isInternationArr: 0,
     // base_url: "http://localhost",
-    base_url: "https://www.cheapairhub.com",
+    base_url: "https://www..com",
     amadeus: [],
     amadeusReturn: [],
     carrier_list: [],
@@ -1056,7 +1056,7 @@ export default {
 
       axios({
         method: "GET",
-        url: "https://www.cheapairhub.com/api/api.php?getAirport=getAirport&query=" + ori_,
+        url: "https://www..com/api/api.php?getAirport=getAirport&query=" + ori_,
         headers: {
           "Content-Type": "application/x-www-form-urlencoded"
         }
@@ -1083,7 +1083,7 @@ export default {
 
       axios({
         method: "GET",
-        url: "https://www.cheapairhub.com/api/api.php?getAirport=getAirport&query=" + des_,
+        url: "https://www..com/api/api.php?getAirport=getAirport&query=" + des_,
         headers: {
           "Content-Type": "application/x-www-form-urlencoded"
         }
@@ -1380,9 +1380,9 @@ console.log('rtnsssssssssssssssssssssssss')
       var rtn = "Oneway"
         if(this.picked == 'roundtrip'){
             rtn = "Return"
-         window.location.href = "/cheapairhub4/en-us/searchflight?SearchType="+ rtn + "&OriginStation="+ $("#from_iata").val().toUpperCase()  +"&DestinationStation="+ $("#to_iata").val().toUpperCase() +"&DepartureDate="+ newstring1 +"&ReturnDate="+ newstring2 +"&Adults="+ $(".drop-down1 .selected .value").html() +"&Children="+ $(".drop-down2 .selected .value").html() +"&Infants="+ $(".drop-down3 .selected .value").html() +"&cabinclass=" + $(".drop-down .selected .value").html().toLowerCase()
+         window.location.href = "/4/en-us/searchflight?SearchType="+ rtn + "&OriginStation="+ $("#from_iata").val().toUpperCase()  +"&DestinationStation="+ $("#to_iata").val().toUpperCase() +"&DepartureDate="+ newstring1 +"&ReturnDate="+ newstring2 +"&Adults="+ $(".drop-down1 .selected .value").html() +"&Children="+ $(".drop-down2 .selected .value").html() +"&Infants="+ $(".drop-down3 .selected .value").html() +"&cabinclass=" + $(".drop-down .selected .value").html().toLowerCase()
         }else{
-         window.location.href = "/cheapairhub4/en-us/searchflight?SearchType="+ rtn + "&OriginStation="+ $("#from_iata").val().toUpperCase()  +"&DestinationStation="+ $("#to_iata").val().toUpperCase() +"&DepartureDate="+ newstring1 +"&Adults="+ $(".drop-down1 .selected .value").html() +"&Children="+ $(".drop-down2 .selected .value").html() +"&Infants="+ $(".drop-down3 .selected .value").html() +"&cabinclass=" + $(".drop-down .selected .value").html().toLowerCase()
+         window.location.href = "/4/en-us/searchflight?SearchType="+ rtn + "&OriginStation="+ $("#from_iata").val().toUpperCase()  +"&DestinationStation="+ $("#to_iata").val().toUpperCase() +"&DepartureDate="+ newstring1 +"&Adults="+ $(".drop-down1 .selected .value").html() +"&Children="+ $(".drop-down2 .selected .value").html() +"&Infants="+ $(".drop-down3 .selected .value").html() +"&cabinclass=" + $(".drop-down .selected .value").html().toLowerCase()
 
         }
 
@@ -1399,7 +1399,7 @@ console.log('rtnsssssssssssssssssssssssss')
     sendDisc: function(e) {
       axios({
         method: "GET",
-        url: "https://www.cheapairhub.com/api/api.php?sendDisc=sendDisc",
+        url: "https://www..com/api/api.php?sendDisc=sendDisc",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded"
         }
@@ -2301,7 +2301,7 @@ console.log('rtnsssssssssssssssssssssssss')
                 case 401:
                   console.log("Token Expired");
                   $("#error_log p").html(
-                    "Access Token Expired. Please contact support@cheapairhub.com. ( Error code 401 )"
+                    "Access Token Expired. Please contact support@.com. ( Error code 401 )"
                   );
                   break;
 
@@ -2315,13 +2315,13 @@ console.log('rtnsssssssssssssssssssssssss')
                 case 500:
                   console.log("Not found");
                   $("#error_log p").html(
-                    "System error has occured. Please contact support@cheapairhub.com. ( Error code 500 )"
+                    "System error has occured. Please contact support@.com. ( Error code 500 )"
                   );
                   break;
 
                 default:
                   $("#error_log p").html(
-                    "Something is wrong. Please contact support@cheapairhub.com. ( Error code 503 )"
+                    "Something is wrong. Please contact support@.com. ( Error code 503 )"
                   );
               }
             });

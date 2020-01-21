@@ -42,7 +42,7 @@
             <h4>Please save the transaction ID for future reference</h4>
             <p>Transaction ID: {{ transaction_id }}</p>
             <p>Call the below number to confirm your booking at the lowest fare</p>
-            <p>1888-224-3071</p>
+            <p>+1-888-201-0212</p>
           </div>
         </div>
       </div>
@@ -825,7 +825,7 @@
         <div class="contact" style="width:100%">
           <div class="row">
             <div class="hide-on-med-and-down col s24 m24 l12 pic-call">
-              <a href="tel:1888-224-3071">
+              <a href="tel:+1-888-201-0212">
                 <h1>
                   <i class="fa fa-phone-square"></i>&nbsp;CALL NOW
                 </h1>
@@ -839,7 +839,7 @@
     justify-content: center;"
             >
               <div style="text-align:center">
-                <p style="color:white;font-size:45px">1888-224-3071</p>
+                <p style="color:white;font-size:45px">+1-888-201-0212</p>
                 <p style="color:white">Call For Unpublished Cheap Flight Deals</p>
               </div>
             </div>
@@ -953,9 +953,9 @@ export default {
       this.onResize();
     });
 
-    $(".telephone").attr("href", "tel:1888-224-3071");
+    $(".telephone").attr("href", "tel:+1-888-201-0212");
 
-    $(".telephone").html("1888-224-3071");
+    $(".telephone").html("+1-888-201-0212");
 
     window.addEventListener("resize", this.onResize);
 

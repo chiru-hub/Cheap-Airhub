@@ -26,7 +26,7 @@
             style="padding-bottom:10px"
           >Call the below Toll free Number to confirm your booking at the lowest fare</p>
           <p style="color:black;font-weight:bold">
-            <a href="tel:1888-201-0212">1888-201-0212</a>
+            <a href="tel:+1-888-201-0212">+1-888-201-0212</a>
           </p>
         </div>
       </div>

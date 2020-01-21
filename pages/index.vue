@@ -825,7 +825,7 @@
         <div class="contact" style="width:100%">
           <div class="row">
             <div class="hide-on-med-and-down col s24 m24 l12 pic-call">
-              <a href="tel:1888-201-0212">
+              <a href="tel:+1-888-201-0212">
                 <h1>
                   <i class="fa fa-phone-square"></i>&nbsp;CALL NOW
                 </h1>
@@ -839,7 +839,7 @@
     justify-content: center;"
             >
               <div style="text-align:center">
-                <p style="color:white;font-size:45px">1888-201-0212</p>
+                <p style="color:white;font-size:45px">+1-888-201-0212</p>
                 <p style="color:white">Call For Unpublished Cheap Flight Deals</p>
               </div>
             </div>

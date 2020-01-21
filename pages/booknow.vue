@@ -357,7 +357,7 @@ export default {
       axios({
         method: "GET",
         url:
-          "https://www..com/api/api.php?getCountries=getCountries",
+          "https://www.cheapairgo.com/api/api.php?getCountries=getCountries",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded"
         },
@@ -377,7 +377,7 @@ export default {
       axios({
         method: "GET",
         url:
-          "https://www..com/api/api.php?getStates=getStates&country_id=" +
+          "https://www.cheapairgo.com/api/api.php?getStates=getStates&country_id=" +
           this.country_id,
         headers: {
           "Content-Type": "application/x-www-form-urlencoded"
@@ -434,7 +434,7 @@ export default {
       axios({
         method: "POST",
         data: bodyFormData,
-        url: "https://www..com/api/api.php?sendform=sendform",
+        url: "https://www.cheapairgo.com/api/api.php?sendform=sendform",
 
         headers: {
           "Access-Control-Allow-Origin": "*"

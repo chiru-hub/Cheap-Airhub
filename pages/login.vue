@@ -312,7 +312,7 @@ export default {
 
       axios({
         method: 'POST',
-        url: "https://www..com/api/api.php?login=login",
+        url: "https://www.cheapairgo.com/api/api.php?login=login",
         headers: {
           'Content-Type': 'multipart/form-data'
         },
@@ -346,7 +346,7 @@ export default {
 
       axios({
         method: 'POST',
-        url: "https://www..com/api/api.php?changePass=changePass",
+        url: "https://www.cheapairgo.com/api/api.php?changePass=changePass",
         headers: {
           'Content-Type': 'multipart/form-data'
         },

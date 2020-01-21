@@ -141,7 +141,7 @@ export default {
       axios({
         method: "POST",
         data: bodyFormData,
-        url: "https://www..com/api/api.php?sendformContact=sendformContact",
+        url: "https://www.cheapairgo.com/api/api.php?sendformContact=sendformContact",
 
         headers: {
           "Access-Control-Allow-Origin": "*"

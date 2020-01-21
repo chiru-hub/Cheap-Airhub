@@ -1059,7 +1059,7 @@ export default {
     isInternationDep: 0,
     isInternationArr: 0,
     // base_url: "http://localhost",
-    base_url: "https://www..com",
+    base_url: "https://www.cheapairgo.com",
     amadeus: [],
     amadeusReturn: [],
     carrier_list: [],
@@ -1120,7 +1120,7 @@ export default {
     axios({
       method: "GET",
       url:
-        "https://www..com/api/api.php?getAirport=getAirport&query=" +
+        "https://www.cheapairgo.com/api/api.php?getAirport=getAirport&query=" +
         ori_,
       headers: {
         "Content-Type": "application/x-www-form-urlencoded"
@@ -1146,7 +1146,7 @@ export default {
         axios({
           method: "GET",
           url:
-            "https://www..com/api/api.php?getAirport=getAirport&query=" +
+            "https://www.cheapairgo.com/api/api.php?getAirport=getAirport&query=" +
             des_,
           headers: {
             "Content-Type": "application/x-www-form-urlencoded"
@@ -1516,7 +1516,7 @@ export default {
     sendDisc: function(e) {
       axios({
         method: "GET",
-        url: "https://www..com/api/api.php?sendDisc=sendDisc",
+        url: "https://www.cheapairgo.com/api/api.php?sendDisc=sendDisc",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded"
         }

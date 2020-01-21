@@ -278,7 +278,7 @@ body {
 }
 
 .navbar {
-  background-color: #1f1f1f;
+  background-color: #11172b;
   height: 60px;
   color: white;
   display: flex;
@@ -649,7 +649,7 @@ li {
       rgba(0, 0, 0, 0.5),
       rgba(255, 255, 255, 0.05)
     ),
-    url(https://gos3.ibcdn.com/flight-1550057390.jpg);
+    url(/cheapairgo2edited.jpg);
   background-size: cover;
   padding: 0 0 85px;
 }
@@ -828,7 +828,7 @@ p {
 }
 
 .air-code h4 {
-  color: #333;
+  color: #fff;
   margin-top: 155px;
   text-align: center;
 }
@@ -860,7 +860,7 @@ p {
 }
 
 .air-cont h4 {
-  color: #333;
+  color: #fff;
   margin-top: 155px;
   text-align: center;
 }

@@ -86,7 +86,9 @@
         <div class="col s24 m24 l6">
           <div class="news-letter" style="margin: 30px 0 10px">
             <strong>Newsletter</strong>
-            <p style="font-size:13px;padding: 9px 0;">Subscribe to our GREAT DEALS for you</p>
+            <p
+              style="font-size:13px;padding: 9px 0;color:white"
+            >Subscribe to our GREAT DEALS for you</p>
             <div class="form-group">
               <form id="subscribe-validate" novalidate="novalidate">
                 <input
@@ -130,7 +132,7 @@
 <style scoped>
 a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 .space-footer {
@@ -139,11 +141,11 @@ a {
 
 ul,
 .news-letter {
-  color: black;
+  color: white !important;
 }
 
 .footer {
-  background-color: #f1f1f1;
+  background-color: #11172b;
 }
 
 .suppliers:after {
@@ -159,10 +161,12 @@ ul,
 
 ul li:first-child {
   font-weight: bold;
+  color: #7d8388;
 }
 ul li:not(:first-child) {
   line-height: 25px;
   font-size: 13px;
+  color: #fff !important;
 }
 
 .btn-sub[disabled] {

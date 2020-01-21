@@ -5,7 +5,7 @@
         <div class="text-detailpage xs-padd-0">
           <h2 class="head-deatilpage">Contact Us</h2>
           <div class="row body-contact">
-            <div class="detail-info col l12 m24 m24">
+            <!-- <div class="detail-info col l12 m24 m24">
               <h4
                 style="font-size:18px;padding-top:20px"
               >CheapAirHub subsidiary Of Fx Trade Consulting Private Limited</h4>
@@ -19,7 +19,7 @@
                 v-if="form_submitted"
                 style="color:green"
               >Your query has been received. We will get back to you soon.</p>
-            </div>
+            </div>-->
             <!-- <hr /> -->
             <div class="fill-info col l12 m24 m24">
               <form id="SendEmailMessageForm">
@@ -97,7 +97,7 @@
               </form>
             </div>
           </div>
-          <div class="footer-contact text-right">
+          <div class="footer-contact text-left">
             <p id="send-msg-msg" class></p>
             <button
               class="btn btn-default"
@@ -207,9 +207,9 @@ textarea {
   padding-bottom: 5px;
 }
 
-.detail-info p{
-      white-space: pre-line;
-      padding-top: 10px
+.detail-info p {
+  white-space: pre-line;
+  padding-top: 10px;
 }
 
 hr {

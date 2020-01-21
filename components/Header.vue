@@ -5,7 +5,7 @@
         <div>
           <nuxt-link to="/">
             <img
-              src="~static/cheapairgo.png"
+              src="~static/cheapfarego.png"
               style="height: 120px;width: 100%;object-fit: contain;padding:7px 0;object-position: left;"
             />
           </nuxt-link>
@@ -22,7 +22,7 @@
           <div style="display: flex;flex-direction:column;justify-content: center;">
             <div style="display:flex;align-items:baseline;white-space: nowrap;">
               <img style="height:12px;padding-right:10px" src="~static/call-answer.svg" />
-              <a style="color:white" class="telephone" href="tel:18882243071">1-888-224-3071</a>
+              <a style="color:white" class="telephone" href="tel:18882010212">1-888-201-0212</a>
             </div>
             <span style="font-size:12px;text-align:right">Toll free – 24 X 7</span>
           </div>

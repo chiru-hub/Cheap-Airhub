@@ -72,7 +72,7 @@
               Call the below Toll free Number to confirm your booking at the
               lowest fare
             </p>
-            <p style="color:black;font-weight:bold">1888-224-3071</p>
+            <p style="color:black;font-weight:bold">1888-201-0212</p>
           </div>
         </div>
       </div>
@@ -682,11 +682,11 @@
                           style="width: 50px;height: 100%;object-fit: contain;"
                           src="~static/call-now.gif"
                         />
-                        <p class="flight__phone">1888-224-3071</p>
+                        <p class="flight__phone">1888-201-0212</p>
                       </div>
                       <a
                         class="btn"
-                        href="tel:1888-224-3071 "
+                        href="tel:1888-201-0212 "
                         style="color:white; text-decoration:none;margin-top: 20px"
                       >Call Now</a>
                     </div>
@@ -800,11 +800,11 @@
                       style="width: 50px;height: 100%;object-fit: contain;"
                       src="~static/call-now.gif"
                     />
-                    <p class="flight__phone">1888-224-3071</p>
+                    <p class="flight__phone">1888-201-0212</p>
                   </div>
                   <a
                     class="btn"
-                    href="tel:1888-224-3071 "
+                    href="tel:1888-201-0212 "
                     style="color:white; text-decoration:none;margin-top: 20px"
                   >Call Now</a>
                 </div>
@@ -824,8 +824,8 @@
                       Seems not found what you are looking for ? Call Now For
                       Dirt Cheap Fares
                       <a
-                        href="tel:1888-224-3071 "
-                      >1888-224-3071</a>
+                        href="tel:1888-201-0212 "
+                      >1888-201-0212</a>
                     </p>
                   </div>
                   <div v-if="isInternationDep == 1">
@@ -840,8 +840,8 @@
                       Seems not found what you are looking for ? Call Now For
                       Dirt Cheap Fares
                       <a
-                        href="tel:1888-224-3071 "
-                      >1888-224-3071</a>
+                        href="tel:1888-201-0212 "
+                      >1888-201-0212</a>
                     </p>
                   </div>
                   <p class="show_flight" @click="showDetail(index)">Flight Details</p>
@@ -1073,9 +1073,9 @@ export default {
   }),
 
   mounted() {
-    $(".telephone").attr("href", "tel:1888-224-3071");
+    $(".telephone").attr("href", "tel:1888-201-0212");
 
-    $(".telephone").html("1888-224-3071");
+    $(".telephone").html("1888-201-0212");
 
     var second_part = this.$route.query;
 

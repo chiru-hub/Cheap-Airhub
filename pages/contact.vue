@@ -8,7 +8,7 @@
             <!-- <div class="detail-info col l12 m24 m24">
               <h4
                 style="font-size:18px;padding-top:20px"
-              >CheapAirGo subsidiary Of Fx Trade Consulting Private Limited</h4>
+              >CheapAirGo </h4>
               <p><span style="font-weight:bold">Address :</span>Suit 36, Unit 1701, Express Trade Tower-5,
                 7thFloor, Sector-132,
                 Noida UP 201301</p>

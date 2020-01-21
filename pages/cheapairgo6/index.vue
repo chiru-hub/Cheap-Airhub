@@ -839,7 +839,7 @@
     justify-content: center;"
             >
               <div style="text-align:center">
-                <p style="color:white;font-size:45px">+1-888-224-3071</p>
+                <p style="color:white;font-size:35px;white-space:nowrap">+1-888-224-3071</p>
                 <p style="color:white">Call For Unpublished Cheap Flight Deals</p>
               </div>
             </div>

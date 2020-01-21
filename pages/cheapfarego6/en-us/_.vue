@@ -72,7 +72,7 @@
               Call the below Toll free Number to confirm your booking at the
               lowest fare
             </p>
-            <p style="color:black;font-weight:bold">+1-888-224-3071</p>
+            <p style="color:black;font-weight:bold">+1-888-201-0212</p>
           </div>
         </div>
       </div>
@@ -682,11 +682,11 @@
                           style="width: 50px;height: 100%;object-fit: contain;"
                           src="~static/call-now.jpg"
                         />
-                        <p class="flight__phone">+1-888-224-3071</p>
+                        <p class="flight__phone">+1-888-201-0212</p>
                       </div>
                       <a
                         class="btn"
-                        href="tel:+1-888-224-3071"
+                        href="tel:+1-888-201-0212 "
                         style="color:white; text-decoration:none;margin-top: 20px"
                       >Call Now</a>
                     </div>
@@ -774,7 +774,6 @@
                     <span style="color:grey;font-size:12px">fr</span>
                     $ {{ p.price.toFixed(2) }}
                   </h3>
-
                   <h3 style="font-size:30px" v-if="p.isRound == 1">
                     <span style="color:grey;font-size:12px">fr</span>
                     $
@@ -785,6 +784,7 @@
                   </h3>
                   <p style="padding-top: 5px">Per Adult</p>
                   <p style="color:red;padding-top: 5px">Limited Time Offer</p>
+
                   <p
                     class="hide-on-med-and-up"
                     style="padding-bottom: 10px"
@@ -800,11 +800,11 @@
                       style="width: 50px;height: 100%;object-fit: contain;"
                       src="~static/call-now.jpg"
                     />
-                    <p class="flight__phone">+1-888-224-3071</p>
+                    <p class="flight__phone">+1-888-201-0212</p>
                   </div>
                   <a
                     class="btn"
-                    href="tel:+1-888-224-3071"
+                    href="tel:+1-888-201-0212 "
                     style="color:white; text-decoration:none;margin-top: 20px"
                   >Call Now</a>
                 </div>
@@ -824,8 +824,8 @@
                       Seems not found what you are looking for ? Call Now For
                       Dirt Cheap Fares
                       <a
-                        href="tel:+1-888-224-3071"
-                      >+1-888-224-3071</a>
+                        href="tel:+1-888-201-0212 "
+                      >+1-888-201-0212</a>
                     </p> -->
                   </div>
                   <div v-if="isInternationDep == 1">
@@ -833,15 +833,15 @@
                       class="hide-on-small-only"
                       style="padding-bottom: 10px"
                     >For more details, ask our Travel Consultant</p>
-                    <!-- <p
+                    <p
                       style="font-size:12px;font-style:italic;color:#515151;font-family:'Manjari'"
                     >Cabin: 7kg | Check-in: 25kg | Refundable</p>
-                    <p style="font-size:12px;font-style:italic;color:#515151;font-family:'Manjari'">
+                    <!-- <p style="font-size:12px;font-style:italic;color:#515151;font-family:'Manjari'">
                       Seems not found what you are looking for ? Call Now For
                       Dirt Cheap Fares
                       <a
-                        href="tel:+1-888-224-3071"
-                      >+1-888-224-3071</a>
+                        href="tel:+1-888-201-0212 "
+                      >+1-888-201-0212</a>
                     </p> -->
                   </div>
                   <p class="show_flight" @click="showDetail(index)">Flight Details</p>
@@ -860,6 +860,7 @@
                                 q.carrier_icon +
                                 '.png'
                             "
+                            @error="setFallbackImageUrl"
                           />
                           <p>{{ q.carrier_name }}</p>
                           <p>{{ q.carrier_icon }} - {{ q.flight_number }}</p>
@@ -987,6 +988,7 @@
             </div>
           </div>
         </div>
+
         <!-- <div id="loop_here">
          <div class="card">
           <div class="flight_name">
@@ -1057,7 +1059,7 @@ export default {
     isInternationDep: 0,
     isInternationArr: 0,
     // base_url: "http://localhost",
-    base_url: "https://www.cheapairgo.com",
+    base_url: "https://www.cheapfarego.com",
     amadeus: [],
     amadeusReturn: [],
     carrier_list: [],
@@ -1071,6 +1073,10 @@ export default {
   }),
 
   mounted() {
+    $(".telephone").attr("href", "tel:+1-888-201-0212");
+
+    $(".telephone").html("+1-888-201-0212");
+
     var second_part = this.$route.query;
 
     console.log(second_part);
@@ -1080,9 +1086,6 @@ export default {
     var start_date_ = second_part.DepartureDate.split("/")
       .reverse()
       .join("/");
-    var end_date_ = second_part.ReturnDate.split("/")
-      .reverse()
-      .join("/");
 
     //  for (const [key, value] of Object.entries(second_part)) {
 
@@ -1090,11 +1093,16 @@ export default {
 
     // }
 
+    console.log(start_date_);
+
     localStorage.setItem("from", ori_);
     localStorage.setItem("to", des_);
     localStorage.setItem("departure", start_date_);
 
     if (second_part.SearchType.toLowerCase() == "return") {
+      var end_date_ = second_part.ReturnDate.split("/")
+        .reverse()
+        .join("/");
       localStorage.setItem("way", "roundtrip");
       localStorage.setItem("return", end_date_);
     } else if (second_part.SearchType.toLowerCase() == "oneway") {
@@ -1102,7 +1110,7 @@ export default {
       localStorage.setItem("return", start_date_);
     }
 
-    localStorage.setItem("travel_class", second_part.cabinclass.toUpperCase());
+    localStorage.setItem("travel_class", second_part.cabinclass);
     localStorage.setItem("adult", second_part.Adults);
     localStorage.setItem("children", second_part.Children);
     localStorage.setItem("infants", second_part.Infants);
@@ -1112,7 +1120,7 @@ export default {
     axios({
       method: "GET",
       url:
-        "https://www.cheapairgo.com/api/api.php?getAirport=getAirport&query=" +
+        "https://www.cheapfarego.com/api/api.php?getAirport=getAirport&query=" +
         ori_,
       headers: {
         "Content-Type": "application/x-www-form-urlencoded"
@@ -1138,7 +1146,7 @@ export default {
         axios({
           method: "GET",
           url:
-            "https://www.cheapairgo.com/api/api.php?getAirport=getAirport&query=" +
+            "https://www.cheapfarego.com/api/api.php?getAirport=getAirport&query=" +
             des_,
           headers: {
             "Content-Type": "application/x-www-form-urlencoded"
@@ -1315,6 +1323,9 @@ export default {
               })
               .data("datepicker");
 
+            console.log(localStorage.getItem("departure"));
+            console.log(localStorage.getItem("return"));
+
             dp.selectDate(new Date(localStorage.getItem("departure")));
             dp1.selectDate(new Date(localStorage.getItem("return")));
 
@@ -1421,6 +1432,11 @@ export default {
   },
 
   methods: {
+    setFallbackImageUrl(event) {
+      // alert("Image Error")
+      // console.log('Image failed to load, setting fallback.')
+      // event.target.src = '/images/adv_1.png'
+    },
     newSearch: function() {
       console.log("rtnsssssssssssssssssssssssss");
 
@@ -1438,6 +1454,55 @@ export default {
       var rtn = "Oneway";
       if (this.picked == "roundtrip") {
         rtn = "Return";
+        window.location.href =
+          "/cheapfarego6/en-us/searchflight?SearchType=" +
+          rtn +
+          "&OriginStation=" +
+          $("#from_iata")
+            .val()
+            .toUpperCase() +
+          "&DestinationStation=" +
+          $("#to_iata")
+            .val()
+            .toUpperCase() +
+          "&DepartureDate=" +
+          newstring1 +
+          "&ReturnDate=" +
+          newstring2 +
+          "&Adults=" +
+          $(".drop-down1 .selected .value").html() +
+          "&Children=" +
+          $(".drop-down2 .selected .value").html() +
+          "&Infants=" +
+          $(".drop-down3 .selected .value").html() +
+          "&cabinclass=" +
+          $(".drop-down .selected .value")
+            .html()
+            .toLowerCase();
+      } else {
+        window.location.href =
+          "/cheapfarego6/en-us/searchflight?SearchType=" +
+          rtn +
+          "&OriginStation=" +
+          $("#from_iata")
+            .val()
+            .toUpperCase() +
+          "&DestinationStation=" +
+          $("#to_iata")
+            .val()
+            .toUpperCase() +
+          "&DepartureDate=" +
+          newstring1 +
+          "&Adults=" +
+          $(".drop-down1 .selected .value").html() +
+          "&Children=" +
+          $(".drop-down2 .selected .value").html() +
+          "&Infants=" +
+          $(".drop-down3 .selected .value").html() +
+          "&cabinclass=" +
+          $(".drop-down .selected .value")
+            .html()
+            .toLowerCase();
       }
 
       console.log("rtn");
@@ -1445,35 +1510,13 @@ export default {
 
       // https://booking.domain.com/en-us/selectflights?SearchType=Oneway&OriginStation=HKG&DestinationStation=NGO&DepartureDate=03/03/2017&Adults=1
 
-      window.location.href =
-        "/en-us/?SearchType=" +
-        rtn +
-        "&OriginStation=" +
-        $("#from_iata")
-          .val()
-          .toUpperCase() +
-        "&DestinationStation=" +
-        $("#to_iata")
-          .val()
-          .toUpperCase() +
-        "&DepartureDate=" +
-        newstring1 +
-        "&ReturnDate=" +
-        newstring2 +
-        "&Adults=" +
-        $(".drop-down1 .selected .value").html() +
-        "&Children=" +
-        $(".drop-down2 .selected .value").html() +
-        "&Infants=" +
-        $(".drop-down3 .selected .value").html() +
-        "&cabinclass=" +
-        $(".drop-down .selected .value").html();
-      // this.$router.go("/6/en-us/?SearchType="+ rtn + "&OriginStation="+ $("#from_iata").val().toUpperCase()  +"&DestinationStation="+ $("#to_iata").val().toUpperCase() +"&DepartureDate="+ newstring1 +"&ReturnDate="+ newstring2 +"&Adults="+ $(".drop-down1 .selected .value").html() +"&Children=2&Infants="+ $(".drop-down3 .selected .value").html() +"&cabinclass=" + $(".drop-down .selected .value").html())
+      // this.$router.go("/cheapfarego6/en-us/?SearchType="+ rtn + "&OriginStation="+ $("#from_iata").val().toUpperCase()  +"&DestinationStation="+ $("#to_iata").val().toUpperCase() +"&DepartureDate="+ newstring1 +"&ReturnDate="+ newstring2 +"&Adults="+ $(".drop-down1 .selected .value").html() +"&Children=2&Infants="+ $(".drop-down3 .selected .value").html() +"&cabinclass=" + $(".drop-down .selected .value").html())
     },
+
     sendDisc: function(e) {
       axios({
         method: "GET",
-        url: "https://www.cheapairgo.com/api/api.php?sendDisc=sendDisc",
+        url: "https://www.cheapfarego.com/api/api.php?sendDisc=sendDisc",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded"
         }
@@ -1503,7 +1546,7 @@ export default {
             "Content-Type": "application/x-www-form-urlencoded"
           },
           data:
-            "client_id=VflUteAXrhhmdy8nkCAEPMbGnzni8Bnb&client_secret=RtGNBLpiWYJdRbYY&grant_type=client_credentials"
+            "client_id=rqAGsz8ICj3uFXLJAoXjpZZNV8zRydwZ&client_secret=GCuL3KqzWAs8j0A7&grant_type=client_credentials"
         })
           .then(res => {
             console.log("res", res);
@@ -2337,7 +2380,7 @@ export default {
                 case 401:
                   console.log("Token Expired");
                   $("#error_log p").html(
-                    "Access Token Expired. Please contact support@.com. ( Error code 401 )"
+                    "Access Token Expired. Please contact support@cheapfarego.com. ( Error code 401 )"
                   );
                   break;
 
@@ -2351,13 +2394,13 @@ export default {
                 case 500:
                   console.log("Not found");
                   $("#error_log p").html(
-                    "System error has occured. Please contact support@.com. ( Error code 500 )"
+                    "System error has occured. Please contact support@cheapfarego.com. ( Error code 500 )"
                   );
                   break;
 
                 default:
                   $("#error_log p").html(
-                    "Something is wrong. Please contact support@.com. ( Error code 503 )"
+                    "Something is wrong. Please contact support@cheapfarego.com. ( Error code 503 )"
                   );
               }
             });
@@ -2962,7 +3005,7 @@ export default {
 .btn {
   text-decoration: none;
   color: #fff;
-  background-color: #e51937;
+  background-color: #f37638;
   text-align: center;
   letter-spacing: 0.5px;
   -webkit-transition: background-color 0.2s ease-out;
@@ -3153,7 +3196,6 @@ export default {
 }
 
 .card.flight_search {
-  /* background-color: #673ab7; */
   background-color: rgb(17, 23, 43);
   padding: 40px 24px 60px 24px;
   border-radius: 0;

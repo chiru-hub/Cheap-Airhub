@@ -936,7 +936,7 @@ export default {
     isInternationDep: 0,
     isInternationArr: 0,
     // base_url: "http://localhost",
-    base_url: "https://www.cheapairhub.com",
+    base_url: "https://www.cheapfarego.com",
     amadeus: [],
     amadeusReturn: [],
     carrier_list: [],
@@ -1247,7 +1247,7 @@ export default {
         localStorage.setItem("to_arr", $("#to_arr").val());
         localStorage.setItem("to_airport", $(".to_airport").html());
 
-        // this.$router.push("/cheapairhub/cheapflightresults");
+        // this.$router.push("/cheapfarego/cheapflightresults");
 
         var newstring1 = $("#dep_date_hidden")
           .val()
@@ -1294,7 +1294,7 @@ export default {
           "&cabinclass=" +
           $(".drop-down .selected .value").html();
 
-        // this.$router.push("/cheapairhub/flights/" + $("#from_iata").val().toLowerCase()  + "/" + $("#to_iata").val().toLowerCase() + "/" + newstring1 + "/" + newstring2 + "/?adults=" + $(".drop-down1 .selected .value").html() + "&children=" + $(".drop-down2 .selected .value").html() + "&infants=" + $(".drop-down3 .selected .value").html() + "&cabinclass=" + $(".drop-down .selected .value").html() + "&rtn=" + rtn + "&utm_campaign=skyscanner" );
+        // this.$router.push("/cheapfarego/flights/" + $("#from_iata").val().toLowerCase()  + "/" + $("#to_iata").val().toLowerCase() + "/" + newstring1 + "/" + newstring2 + "/?adults=" + $(".drop-down1 .selected .value").html() + "&children=" + $(".drop-down2 .selected .value").html() + "&infants=" + $(".drop-down3 .selected .value").html() + "&cabinclass=" + $(".drop-down .selected .value").html() + "&rtn=" + rtn + "&utm_campaign=skyscanner" );
       }
 
       // }

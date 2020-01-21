@@ -55,7 +55,7 @@
       >
         <div>
           <div style="text-align: center">
-            <h4 style="color:white">ALL THE BEST FARES IN ONE SEARCH</h4>
+            <h4 style="color:white">ALL THE BEST FARES IN ONE Bla Bla Bla</h4>
             <h4 style="color:white">TRAVEL WITH DEALS OVER 500 AIRLINES' CHEAP FLIGHTS</h4>
           </div>
           <div class="card main_section">

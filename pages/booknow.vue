@@ -362,7 +362,7 @@ export default {
           "Content-Type": "application/x-www-form-urlencoded"
         },
         data:
-          "client_id=i5t5vHAMFeApnN7kGNlV5zabRd8BxvcZ&client_secret=qzGD0OTlANAChgXs&grant_type=client_credentials"
+          "client_id=uF3APJRHgw2jsifvpalPATiOIwL72Atm&client_secret=ln1lS7FNLem0iCms&grant_type=client_credentials"
       })
         .then(res => {
           console.log("res", res);
@@ -383,7 +383,7 @@ export default {
           "Content-Type": "application/x-www-form-urlencoded"
         },
         data:
-          "client_id=i5t5vHAMFeApnN7kGNlV5zabRd8BxvcZ&client_secret=qzGD0OTlANAChgXs&grant_type=client_credentials"
+          "client_id=uF3APJRHgw2jsifvpalPATiOIwL72Atm&client_secret=ln1lS7FNLem0iCms&grant_type=client_credentials"
       })
         .then(res => {
           console.log("res", res);

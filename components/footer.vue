@@ -145,7 +145,7 @@ ul,
 }
 
 .footer {
-  background-color: #11172b;
+  background-color: black;
 }
 
 .suppliers:after {

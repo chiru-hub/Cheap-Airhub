@@ -1176,8 +1176,8 @@ export default {
         //   dataType: "json",
         //   type: "POST",
         //   data: {
-        //     client_id: "i5t5vHAMFeApnN7kGNlV5zabRd8BxvcZ",
-        //     client_secret: "qzGD0OTlANAChgXs",
+        //     client_id: "uF3APJRHgw2jsifvpalPATiOIwL72Atm",
+        //     client_secret: "ln1lS7FNLem0iCms",
         //     grant_type: "client_credentials"
         //   },
         //   success: function(data, status) {

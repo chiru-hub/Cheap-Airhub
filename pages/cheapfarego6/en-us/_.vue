@@ -826,7 +826,7 @@
                       <a
                         href="tel:+1-888-201-0212 "
                       >+1-888-201-0212</a>
-                    </p> -->
+                    </p>-->
                   </div>
                   <div v-if="isInternationDep == 1">
                     <p
@@ -842,7 +842,7 @@
                       <a
                         href="tel:+1-888-201-0212 "
                       >+1-888-201-0212</a>
-                    </p> -->
+                    </p>-->
                   </div>
                   <p class="show_flight" @click="showDetail(index)">Flight Details</p>
                 </div>
@@ -885,7 +885,10 @@
                           <p class="extra_destination">{{ q.destination_fullname }}</p>
                         </div>
                         <div class="col s24 m3">
-                          <p class="flight_details--price">$ {{ p.price.toFixed(2) }}</p>
+                          <p
+                            class="flight_details--price"
+                            v-if="qIndex == 0"
+                          >$ {{ p.price.toFixed(2) }}</p>
                         </div>
                       </div>
                     </div>

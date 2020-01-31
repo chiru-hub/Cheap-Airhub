@@ -884,7 +884,10 @@
                           <p class="extra_destination">{{ q.destination_fullname }}</p>
                         </div>
                         <div class="col s24 m3">
-                          <p class="flight_details--price">$ {{ p.price.toFixed(2) }}</p>
+                          <p
+                            class="flight_details--price"
+                            v-if="qIndex == 0"
+                          >$ {{ p.price.toFixed(2) }}</p>
                         </div>
                       </div>
                     </div>

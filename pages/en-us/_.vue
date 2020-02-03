@@ -1950,6 +1950,8 @@ export default {
                     data.data[i].offerItems[0].pricePerAdult.total
                 );
 
+                 temp.price = temp.price + (5 / 100) * temp.price;
+
                 temp.seg = seg;
 
                 temp.isRound = 0;
@@ -2203,6 +2205,10 @@ export default {
                     (this.disc / 100) *
                       data.data[i].offerItems[0].pricePerAdult.total
                   );
+
+                  
+                  temp.round_price =
+                    temp.round_price - (5 / 100) * temp.round_price;
 
                   temp.round_seg = round_seg;
                 }

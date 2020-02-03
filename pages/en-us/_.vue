@@ -826,7 +826,7 @@
                       <a
                         href="tel:+1-888-224-3071"
                       >+1-888-224-3071</a>
-                    </p> -->
+                    </p>-->
                   </div>
                   <div v-if="isInternationDep == 1">
                     <p
@@ -842,7 +842,7 @@
                       <a
                         href="tel:+1-888-224-3071"
                       >+1-888-224-3071</a>
-                    </p> -->
+                    </p>-->
                   </div>
                   <p class="show_flight" @click="showDetail(index)">Flight Details</p>
                 </div>
@@ -1729,7 +1729,9 @@ export default {
                     ["1"].split("-")
                     ["0"].split(":");
 
-                  if (b[0] > 12) {
+                  if (b[0] == 12) {
+                    zone = " PM";
+                  } else if (b[0] > 12) {
                     b[0] = b[0] - 12;
                     if (b[0] < 10) {
                       b[0] = "0" + b[0].toString();
@@ -1763,7 +1765,9 @@ export default {
                     ["1"].split("-")
                     ["0"].split(":");
 
-                  if (b[0] > 12) {
+                  if (b[0] == 12) {
+                    zone = " PM";
+                  } else if (b[0] > 12) {
                     b[0] = b[0] - 12;
                     if (b[0] < 10) {
                       b[0] = "0" + b[0].toString();
@@ -1841,7 +1845,9 @@ export default {
                   ["1"].split("-")
                   ["0"].split(":");
 
-                if (b[0] > 12) {
+                if (b[0] == 12) {
+                  zone = " PM";
+                } else if (b[0] > 12) {
                   b[0] = b[0] - 12;
                   if (b[0] < 10) {
                     b[0] = "0" + b[0].toString();
@@ -1882,7 +1888,9 @@ export default {
                   ["1"].split("-")
                   ["0"].split(":");
 
-                if (b[0] > 12) {
+                if (b[0] == 12) {
+                  zone = " PM";
+                } else if (b[0] > 12) {
                   b[0] = b[0] - 12;
                   if (b[0] < 10) {
                     b[0] = "0" + b[0].toString();
@@ -1903,7 +1911,9 @@ export default {
                   ["1"].split("-")
                   ["0"].split(":");
 
-                if (b[0] > 12) {
+                if (b[0] == 12) {
+                  zone = " PM";
+                } else if (b[0] > 12) {
                   b[0] = b[0] - 12;
                   if (b[0] < 10) {
                     b[0] = "0" + b[0].toString();
@@ -1970,7 +1980,9 @@ export default {
                       ["1"].split("-")
                       ["0"].split(":");
 
-                    if (b[0] > 12) {
+                    if (b[0] == 12) {
+                      zone = " PM";
+                    } else if (b[0] > 12) {
                       b[0] = b[0] - 12;
                       if (b[0] < 10) {
                         b[0] = "0" + b[0].toString();
@@ -2004,7 +2016,9 @@ export default {
                       ["1"].split("-")
                       ["0"].split(":");
 
-                    if (b[0] > 12) {
+                    if (b[0] == 12) {
+                      zone = " PM";
+                    } else if (b[0] > 12) {
                       b[0] = b[0] - 12;
                       if (b[0] < 10) {
                         b[0] = "0" + b[0].toString();
@@ -2081,7 +2095,9 @@ export default {
                     ["1"].split("-")
                     ["0"].split(":");
 
-                  if (b[0] > 12) {
+                  if (b[0] == 12) {
+                    zone = " PM";
+                  } else if (b[0] > 12) {
                     b[0] = b[0] - 12;
                     if (b[0] < 10) {
                       b[0] = "0" + b[0].toString();
@@ -2118,7 +2134,9 @@ export default {
                     ["1"].split("-")
                     ["0"].split(":");
 
-                  if (b[0] > 12) {
+                  if (b[0] == 12) {
+                    zone = " PM";
+                  } else if (b[0] > 12) {
                     b[0] = b[0] - 12;
                     if (b[0] < 10) {
                       b[0] = "0" + b[0].toString();
@@ -2139,7 +2157,9 @@ export default {
                     ["1"].split("-")
                     ["0"].split(":");
 
-                  if (b[0] > 12) {
+                  if (b[0] == 12) {
+                    zone = " PM";
+                  } else if (b[0] > 12) {
                     b[0] = b[0] - 12;
                     if (b[0] < 10) {
                       b[0] = "0" + b[0].toString();

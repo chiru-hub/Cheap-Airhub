@@ -1940,7 +1940,8 @@ export default {
                 //   parseFloat(
                 //     (this.disc / 100) *
                 //       data.data[i].offerItems[0].pricePerAdult.total
-                //   ).toFixed(2);
+                //   ).toFixed(2)
+                ;
 
                 temp.og_price = data.data[i].offerItems[0].pricePerAdult.total;
 
@@ -2187,7 +2188,7 @@ export default {
                     zone = " PM";
                   }
                   temp.round_arr_time = b.slice(0, 2).join(":") + zone;
-                  
+
                   temp.round_og_price =
                     data.data[i].offerItems[0].pricePerAdult.total;
 

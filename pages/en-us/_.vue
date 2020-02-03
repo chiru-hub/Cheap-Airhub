@@ -642,12 +642,12 @@
                       <h5 class="hide-on-med-and-down">{{ p.duration }}</h5>
                       <p
                         class="hide-on-med-and-down"
-                        v-if="p.seg.length - 1 > 0"
+                        v-if="p.seg.length > 1"
                         style="font-size: 11px;color: rgb(181, 181, 181);"
                       >{{ p.seg.length - 1 }} stop(s)</p>
                       <p
                         class="hide-on-med-and-down"
-                        v-if="p.seg.length - 1 == 0"
+                        v-if="p.seg.length == 1"
                         style="font-size: 11px;color: rgb(181, 181, 181);"
                       >Non-stop</p>
                     </div>
@@ -662,12 +662,12 @@
                       <p class="flight_arrival">{{ p.arr_time }}</p>
                       <p
                         class="hide-on-large-only"
-                        v-if="p.seg.length - 1 > 0"
+                        v-if="p.seg.length > 1"
                         style="font-size: 11px;color: rgb(181, 181, 181);"
                       >{{ p.seg.length - 1 }} stop(s)</p>
                       <p
                         class="hide-on-large-only"
-                        v-if="p.seg.length - 1 == 0"
+                        v-if="p.seg.length == 1"
                         style="font-size: 11px;color: rgb(181, 181, 181);"
                       >Non-stop</p>
                     </div>
@@ -682,11 +682,11 @@
                           style="width: 50px;height: 100%;object-fit: contain;"
                           src="~static/call-now.jpg"
                         />
-                        <p class="flight__phone">+1-888-224-3071</p>
+                        <p class="flight__phone">+1-888-220-3565</p>
                       </div>
                       <a
                         class="btn"
-                        href="tel:+1-888-224-3071"
+                        href="tel:+1-888-220-3565 "
                         style="color:white; text-decoration:none;margin-top: 20px"
                       >Call Now</a>
                     </div>
@@ -726,15 +726,9 @@
                       </div>
                       <p class="flight_departure">{{ p.round_dep_time }}</p>
                       <p
-                        class="hide-on-med-and-down"
-                        v-if="p.round_seg.length - 1 > 0"
-                        style="font-size: 11px;color: rgb(181, 181, 181);"
-                      >{{ p.seg.length - 1 }} stop(s)</p>
-                      <p
-                        class="hide-on-med-and-down"
-                        v-if="p.round_seg.length - 1 == 0"
-                        style="font-size: 11px;color: rgb(181, 181, 181);"
-                      >Non-stop</p>
+                        class="hide-on-large-only"
+                        style="font-size:11px;color:#b5b5b5"
+                      >{{ p.round_duration }}</p>
                     </div>
                     <div
                       class="extra_duration extar_flight_origin center col s12 m3 hide-on-med-and-down"
@@ -743,12 +737,12 @@
                       <h5>{{ p.round_duration }}</h5>
                       <p
                         class="hide-on-med-and-down"
-                        v-if="p.round_seg.length - 1 > 0"
+                        v-if="p.round_seg.length > 1"
                         style="font-size: 11px;color: rgb(181, 181, 181);"
-                      >{{ p.seg.length - 1 }} stop(s)</p>
+                      >{{ p.round_seg.length - 1 }} stop(s)</p>
                       <p
                         class="hide-on-med-and-down"
-                        v-if="p.round_seg.length - 1 == 0"
+                        v-if="p.round_seg.length == 1"
                         style="font-size: 11px;color: rgb(181, 181, 181);"
                       >Non-stop</p>
                     </div>
@@ -761,6 +755,16 @@
                         >{{ p.round_destination_fullname }}</p>
                       </div>
                       <p class="flight_arrival">{{ p.round_arr_time }}</p>
+                      <p
+                        class="hide-on-large-only"
+                        v-if="p.round_seg.length > 1"
+                        style="font-size: 11px;color: rgb(181, 181, 181);"
+                      >{{ p.round_seg.length - 1 }} stop(s)</p>
+                      <p
+                        class="hide-on-large-only"
+                        v-if="p.round_seg.length == 1"
+                        style="font-size: 11px;color: rgb(181, 181, 181);"
+                      >Non-stop</p>
                     </div>
 
                     <div class="flight_book col s12 m4 hide-on-med-and-down">
@@ -774,7 +778,6 @@
                     <span style="color:grey;font-size:12px">fr</span>
                     $ {{ p.price.toFixed(2) }}
                   </h3>
-
                   <h3 style="font-size:30px" v-if="p.isRound == 1">
                     <span style="color:grey;font-size:12px">fr</span>
                     $
@@ -785,6 +788,7 @@
                   </h3>
                   <p style="padding-top: 5px">Per Adult</p>
                   <p style="color:red;padding-top: 5px">Limited Time Offer</p>
+
                   <p
                     class="hide-on-med-and-up"
                     style="padding-bottom: 10px"
@@ -800,11 +804,11 @@
                       style="width: 50px;height: 100%;object-fit: contain;"
                       src="~static/call-now.jpg"
                     />
-                    <p class="flight__phone">+1-888-224-3071</p>
+                    <p class="flight__phone">+1-888-220-3565</p>
                   </div>
                   <a
                     class="btn"
-                    href="tel:+1-888-224-3071"
+                    href="tel:+1-888-220-3565 "
                     style="color:white; text-decoration:none;margin-top: 20px"
                   >Call Now</a>
                 </div>
@@ -820,12 +824,12 @@
                     <p
                       style="font-size:12px;font-style:italic;color:#515151;font-family:'Manjari'"
                     >Cabin: 7kg | Check-in: 15kg | Refundable</p>
-                    <!-- <p style="font-size:12px;font-style:italic;color:#515151;font-family:'Manjari'">
+                    <!-- <p
+                      style="font-size:12px;font-style:italic;color:#515151;font-family:'Manjari'"
+                    >
                       Seems not found what you are looking for ? Call Now For
                       Dirt Cheap Fares
-                      <a
-                        href="tel:+1-888-224-3071"
-                      >+1-888-224-3071</a>
+                      <a href="tel:+1-888-220-3565 ">+1-888-220-3565</a>
                     </p>-->
                   </div>
                   <div v-if="isInternationDep == 1">
@@ -833,15 +837,15 @@
                       class="hide-on-small-only"
                       style="padding-bottom: 10px"
                     >For more details, ask our Travel Consultant</p>
-                    <!-- <p
+                    <p
                       style="font-size:12px;font-style:italic;color:#515151;font-family:'Manjari'"
                     >Cabin: 7kg | Check-in: 25kg | Refundable</p>
-                    <p style="font-size:12px;font-style:italic;color:#515151;font-family:'Manjari'">
+                    <!-- <p
+                      style="font-size:12px;font-style:italic;color:#515151;font-family:'Manjari'"
+                    >
                       Seems not found what you are looking for ? Call Now For
                       Dirt Cheap Fares
-                      <a
-                        href="tel:+1-888-224-3071"
-                      >+1-888-224-3071</a>
+                      <a href="tel:+1-888-220-3565 ">+1-888-220-3565</a>
                     </p>-->
                   </div>
                   <p class="show_flight" @click="showDetail(index)">Flight Details</p>
@@ -884,7 +888,10 @@
                           <p class="extra_destination">{{ q.destination_fullname }}</p>
                         </div>
                         <div class="col s24 m3">
-                          <p class="flight_details--price">$ {{ p.price.toFixed(2) }}</p>
+                          <p
+                            class="flight_details--price"
+                            v-if="qIndex == 0"
+                          >$ {{ p.price.toFixed(2) }}</p>
                         </div>
                       </div>
                     </div>
@@ -1503,7 +1510,7 @@ export default {
             "Content-Type": "application/x-www-form-urlencoded"
           },
           data:
-            "client_id=VflUteAXrhhmdy8nkCAEPMbGnzni8Bnb&client_secret=RtGNBLpiWYJdRbYY&grant_type=client_credentials"
+            "client_id=rqAGsz8ICj3uFXLJAoXjpZZNV8zRydwZ&client_secret=GCuL3KqzWAs8j0A7&grant_type=client_credentials"
         })
           .then(res => {
             console.log("res", res);

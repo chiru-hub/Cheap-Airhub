@@ -1268,7 +1268,7 @@ export default {
         if (this.picked == "roundtrip") {
           rtn = "Return";
           window.location.href =
-            "/6/en-us/searchflight?SearchType=" +
+            "/cheapairgo6/en-us/searchflight?SearchType=" +
             rtn +
             "&OriginStation=" +
             $("#from_iata")
@@ -1294,7 +1294,7 @@ export default {
               .toLowerCase();
         } else {
           window.location.href =
-            "/6/en-us/searchflight?SearchType=" +
+            "/cheapairgo6/en-us/searchflight?SearchType=" +
             rtn +
             "&OriginStation=" +
             $("#from_iata")

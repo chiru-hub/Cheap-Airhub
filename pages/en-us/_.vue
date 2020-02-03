@@ -1929,12 +1929,25 @@ export default {
                 }
                 temp.arr_time = b.slice(0, 2).join(":") + zone;
 
-                temp.price =
-                  data.data[i].offerItems[0].pricePerAdult.total -
-                  parseFloat(
-                    (this.disc / 100) *
-                      data.data[i].offerItems[0].pricePerAdult.total
-                  ).toFixed(2);
+                // console.log(parseInt(
+                //   (this.disc / 100) *
+                //     data.data[i].offerItems[0].pricePerAdult.total
+                // ).toFixed(2))
+                // console.log(i)
+
+                // temp.price =
+                //   data.data[i].offerItems[0].pricePerAdult.total -
+                //   parseFloat(
+                //     (this.disc / 100) *
+                //       data.data[i].offerItems[0].pricePerAdult.total
+                //   ).toFixed(2);
+
+                temp.og_price = data.data[i].offerItems[0].pricePerAdult.total;
+
+                temp.price =  temp.og_price - parseFloat(
+                  (this.disc / 100) *
+                    data.data[i].offerItems[0].pricePerAdult.total
+                );
 
                 temp.seg = seg;
 
@@ -2174,13 +2187,21 @@ export default {
                     zone = " PM";
                   }
                   temp.round_arr_time = b.slice(0, 2).join(":") + zone;
+                  
+                  temp.round_og_price =
+                    data.data[i].offerItems[0].pricePerAdult.total;
 
-                  temp.round_price =
-                    data.data[i].offerItems[0].pricePerAdult.total -
-                    parseFloat(
-                      (this.disc / 100) *
-                        data.data[i].offerItems[0].pricePerAdult.total
-                    ).toFixed(2);
+                  // temp.round_price =
+                  //   data.data[i].offerItems[0].pricePerAdult.total -
+                  //   parseFloat(
+                  //     (this.disc / 100) *
+                  //       data.data[i].offerItems[0].pricePerAdult.total
+                  //   ).toFixed(2);
+
+                  temp.round_price =  temp.round_og_price - parseFloat(
+                    (this.disc / 100) *
+                      data.data[i].offerItems[0].pricePerAdult.total
+                  );
 
                   temp.round_seg = round_seg;
                 }

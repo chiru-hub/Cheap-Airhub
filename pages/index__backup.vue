@@ -192,7 +192,7 @@
                     <span>Return</span>
                     <p class="blackText font20" id="return_date"></p>
                     <p class="return_day"></p>
-                    
+
                     <input
                       :disabled="picked != 'roundtrip'"
                       type="text"
@@ -799,35 +799,36 @@
       </div>
     </div>
 
-        <div style="background-color:#673ab7">
+    <div style="background-color:#673ab7">
       <div
         class="container section"
-        style="height: 170px;display: flex;align-items: center;justify-content: center;">
-        <div
-          class="contact"
-          style="width:100%"
-        >
+        style="height: 170px;display: flex;align-items: center;justify-content: center;"
+      >
+        <div class="contact" style="width:100%">
           <div class="row">
             <div class="hide-on-med-and-down col s24 m24 l12 pic-call">
-            <a href="tel:+1-888-201-0212">
-                <h1><i class="fa fa-phone-square"></i>&nbsp;CALL NOW</h1>
-            </a>
-        </div>
-        <div class="col s24 m24 l12" style="    height: 190px;
+              <a href="tel:+1-888-201-0212">
+                <h1>
+                  <i class="fa fa-phone-square"></i>&nbsp;CALL NOW
+                </h1>
+              </a>
+            </div>
+            <div
+              class="col s24 m24 l12"
+              style="    height: 190px;
     display: flex;
     align-items: center;
-    justify-content: center;">
-    <div style="text-align:center">
-      <p style="color:white;font-size:45px">+1-888-201-0212</p>
-      <p style="color:white">Call For Unpublished Cheap Flight Deals</p>
-    </div>
-          
+    justify-content: center;"
+            >
+              <div style="text-align:center">
+                <p style="color:white;font-size:45px">+1-888-201-0212</p>
+                <p style="color:white">Call For Unpublished Cheap Flight Deals</p>
+              </div>
+            </div>
           </div>
+        </div>
       </div>
     </div>
-    </div>
-    </div>
-
 
     <div style="background-color:#fff">
       <div
@@ -842,7 +843,7 @@
             <img src="~static/trustpilot_logo.png" alt />
             <p>Get the Best Deal with our Price Indicator &amp; Deal Analyzer Tool</p>
           </div>
-          <div class="col s12  m12 l5">
+          <div class="col s12 m12 l5">
             <img src="~static/flight.png" width="40" height="50" alt />
             <p>Special Bargain Fares From 500+ Airlines</p>
           </div>
@@ -850,18 +851,17 @@
             <img src="~static/Secure.png" width="50" height="50" alt />
             <p>Purchase with Confidence: Safe &amp; Secure Bookings</p>
           </div>
-          <div class="col s12  m12 l5">
+          <div class="col s12 m12 l5">
             <img src="~static/customer.png" width="50" height="50" alt />
             <p>24/7 Round the Clock Customer Service</p>
           </div>
-          <div class="col s24  m24 l5">
+          <div class="col s24 m24 l5">
             <img src="~static/asta_logo.png" alt />
             <p>Purchase with Confidence Join other happy customers</p>
           </div>
         </div>
       </div>
     </div>
-
 
     <div style="border-top: 1px solid #dedede;">
       <div
@@ -1143,7 +1143,7 @@ export default {
           "Content-Type": "application/x-www-form-urlencoded"
         },
         data:
-          "client_id=rqAGsz8ICj3uFXLJAoXjpZZNV8zRydwZ&client_secret=GCuL3KqzWAs8j0A7&grant_type=client_credentials"
+          "client_id=rR08Npstv47Uwv81vE46r4gDQ2Nug7w2&client_secret=4m7nz5lZcSWpfExu&grant_type=client_credentials"
       })
         .then(res => {
           console.log("res", res);
@@ -1237,7 +1237,8 @@ export default {
     getSortedData: function(data, isAsc) {
       return data.sort((a, b) => {
         return (
-          (a.offerItems[0].pricePerAdult.total < b.offerItems[0].pricePerAdult.total &&
+          (a.offerItems[0].pricePerAdult.total <
+            b.offerItems[0].pricePerAdult.total &&
           a.offerItems[0].services[0].segments[0].flightSegment.departure ==
             $("#from_iata").val()
             ? -1
@@ -1352,10 +1353,10 @@ export default {
 
         if (this.airportList.filter(v => v.id == id)[0].iso_country != "IN") {
           this.isInternationDep = 1;
-          localStorage.setItem("isInternationDep" , this.isInternationDep)
+          localStorage.setItem("isInternationDep", this.isInternationDep);
         } else {
           this.isInternationDep = 0;
-          localStorage.setItem("isInternationDep" , this.isInternationDep)
+          localStorage.setItem("isInternationDep", this.isInternationDep);
         }
       }
     },
@@ -1417,11 +1418,11 @@ export default {
         ) {
           this.isInternationArr = 1;
           this.isInternationDep = 1;
-          localStorage.setItem("isInternationDep" , this.isInternationDep)
+          localStorage.setItem("isInternationDep", this.isInternationDep);
         } else {
           if (this.isInternationDep == 0) {
             this.isInternationDep = 0;
-            localStorage.setItem("isInternationDep" , this.isInternationDep)
+            localStorage.setItem("isInternationDep", this.isInternationDep);
           }
         }
       }
@@ -1658,23 +1659,24 @@ export default {
 }
 
 .pic-call {
-    background: url(~static/call-center.png) no-repeat left center rgba(0, 0, 0, 0);
-    height: 190px;
-    background-size: 152px
+  background: url(~static/call-center.png) no-repeat left center
+    rgba(0, 0, 0, 0);
+  height: 190px;
+  background-size: 152px;
 }
 
 .pic-call > a {
-background-color: #ffffff;
-    border-radius: 7px;
-    color: #666;
-    cursor: pointer;
-    float: left;
-    font-weight: bold;
-    margin-bottom: 0;
-    margin-left: 125px;
-    margin-top: 75px;
-    padding: 10px;
-    text-decoration: none;
-    font-size: 10px;
+  background-color: #ffffff;
+  border-radius: 7px;
+  color: #666;
+  cursor: pointer;
+  float: left;
+  font-weight: bold;
+  margin-bottom: 0;
+  margin-left: 125px;
+  margin-top: 75px;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 10px;
 }
 </style>

@@ -886,7 +886,8 @@ export default {
     if (
       localStorage.getItem("from") != null &&
       localStorage.getItem("from") != "" &&
-      (localStorage.getItem("to") != null && localStorage.getItem("to") != "")
+      localStorage.getItem("to") != null &&
+      localStorage.getItem("to") != ""
     ) {
       $(".processing").removeClass("hide");
 
@@ -1157,7 +1158,7 @@ export default {
             "Content-Type": "application/x-www-form-urlencoded"
           },
           data:
-            "client_id=rqAGsz8ICj3uFXLJAoXjpZZNV8zRydwZ&client_secret=GCuL3KqzWAs8j0A7&grant_type=client_credentials"
+            "client_id=rR08Npstv47Uwv81vE46r4gDQ2Nug7w2&client_secret=4m7nz5lZcSWpfExu&grant_type=client_credentials"
         })
           .then(res => {
             console.log("res", res);
@@ -1375,12 +1376,9 @@ export default {
                     ).detailedName
                   );
 
-                  var a = data.data[
-                    i
-                  ].offerItems[0].services[0].segments[
-                    j
-                  ].flightSegment.departure.at
-
+                  var a =
+                    data.data[i].offerItems[0].services[0].segments[j]
+                      .flightSegment.departure.at;
 
                   var zone = " AM";
 
@@ -1391,19 +1389,13 @@ export default {
 
                   if (b[0] > 12) {
                     b[0] = b[0] - 12;
-                    if(b[0] < 10){
-                      b[0] = "0" + b[0].toString()
+                    if (b[0] < 10) {
+                      b[0] = "0" + b[0].toString();
                     }
-                    zone = " PM"
+                    zone = " PM";
                   }
 
-                  tmp.dep_time = b.slice(0, 2).join(":") + zone
-
-
-
-
-
-
+                  tmp.dep_time = b.slice(0, 2).join(":") + zone;
 
                   tmp.destination =
                     data.data[i].offerItems[0].services[0].segments[
@@ -1418,12 +1410,9 @@ export default {
                     ).detailedName
                   );
 
-
-
-                  var a = data.data[i].offerItems[0].services[0].segments[
-                    j
-                  ].flightSegment.arrival.at
-
+                  var a =
+                    data.data[i].offerItems[0].services[0].segments[j]
+                      .flightSegment.arrival.at;
 
                   var zone = " AM";
 
@@ -1434,15 +1423,14 @@ export default {
 
                   if (b[0] > 12) {
                     b[0] = b[0] - 12;
-                    if(b[0] < 10){
-                      b[0] = "0" + b[0].toString()
+                    if (b[0] < 10) {
+                      b[0] = "0" + b[0].toString();
                     }
-                    zone = " PM"
+                    zone = " PM";
                   }
-                  tmp.arr_time = b.slice(0, 2).join(":") + zone
+                  tmp.arr_time = b.slice(0, 2).join(":") + zone;
 
-
-                  console.log(tmp.arr_time)
+                  console.log(tmp.arr_time);
 
                   tmp.flight_number =
                     data.data[i].offerItems[0].services[0].segments[
@@ -1500,31 +1488,26 @@ export default {
                   ).detailedName
                 );
 
-               var a = data.data[
-                  i
-                ].offerItems[0].services[0].segments[0].flightSegment.departure.at
+                var a =
+                  data.data[i].offerItems[0].services[0].segments[0]
+                    .flightSegment.departure.at;
 
+                var zone = " AM";
 
-                                    var zone = " AM";
+                var b = a
+                  .split("T")
+                  ["1"].split("-")
+                  ["0"].split(":");
 
-                  var b = a
-                    .split("T")
-                    ["1"].split("-")
-                    ["0"].split(":");
-
-                  if (b[0] > 12) {
-                    b[0] = b[0] - 12;
-                    if(b[0] < 10){
-                      b[0] = "0" + b[0].toString()
-                    }
-                    zone = " PM"
+                if (b[0] > 12) {
+                  b[0] = b[0] - 12;
+                  if (b[0] < 10) {
+                    b[0] = "0" + b[0].toString();
                   }
-                  
-                  temp.dep_time = b.slice(0, 2).join(":") + zone
+                  zone = " PM";
+                }
 
-
-
-
+                temp.dep_time = b.slice(0, 2).join(":") + zone;
 
                 temp.destination =
                   data.data[i].offerItems[0].services[0].segments[
@@ -1540,59 +1523,58 @@ export default {
                   ).detailedName
                 );
 
+                var a =
+                  data.data[i].offerItems[0].services[0].segments[
+                    data.data[i].offerItems[0].services[0].segments.length - 1
+                  ].flightSegment.arrival.at;
 
-                
-                  var a = data.data[i].offerItems[0].services[0].segments[
-                  data.data[i].offerItems[0].services[0].segments.length - 1
-                ].flightSegment.arrival.at
+                var b = a
+                  .split("T")
+                  ["1"].split("-")
+                  ["0"].split(":");
 
-                  var b = a
-                    .split("T")
-                    ["1"].split("-")
-                    ["0"].split(":");
+                var zone = " AM";
 
-                  var zone = " AM";
-                  
-                  var b = a
-                    .split("T")
-                    ["1"].split("-")
-                    ["0"].split(":");
+                var b = a
+                  .split("T")
+                  ["1"].split("-")
+                  ["0"].split(":");
 
-                  if (b[0] > 12) {
-                    b[0] = b[0] - 12;
-                    if(b[0] < 10){
-                      b[0] = "0" + b[0].toString()
-                    }
-                    zone = " PM"
+                if (b[0] > 12) {
+                  b[0] = b[0] - 12;
+                  if (b[0] < 10) {
+                    b[0] = "0" + b[0].toString();
                   }
-                  temp.arr_time = b.slice(0, 2).join(":") + zone
+                  zone = " PM";
+                }
+                temp.arr_time = b.slice(0, 2).join(":") + zone;
 
-                var a = data.data[i].offerItems[0].services[0].segments[
-                  data.data[i].offerItems[0].services[0].segments.length - 1
-                ].flightSegment.arrival.at
+                var a =
+                  data.data[i].offerItems[0].services[0].segments[
+                    data.data[i].offerItems[0].services[0].segments.length - 1
+                  ].flightSegment.arrival.at;
 
+                var zone = " AM";
 
-                
-                  var zone = " AM";
-                  
-                  var b = a
-                    .split("T")
-                    ["1"].split("-")
-                    ["0"].split(":");
+                var b = a
+                  .split("T")
+                  ["1"].split("-")
+                  ["0"].split(":");
 
-                  if (b[0] > 12) {
-                    b[0] = b[0] - 12;
-                    if(b[0] < 10){
-                      b[0] = "0" + b[0].toString()
-                    }
-                    zone = " PM"
+                if (b[0] > 12) {
+                  b[0] = b[0] - 12;
+                  if (b[0] < 10) {
+                    b[0] = "0" + b[0].toString();
                   }
-                  temp.arr_time = b.slice(0, 2).join(":") + zone
+                  zone = " PM";
+                }
+                temp.arr_time = b.slice(0, 2).join(":") + zone;
 
                 temp.price =
                   data.data[i].offerItems[0].pricePerAdult.total -
                   parseFloat(
-                    (this.disc / 100) * data.data[i].offerItems[0].pricePerAdult.total
+                    (this.disc / 100) *
+                      data.data[i].offerItems[0].pricePerAdult.total
                   ).toFixed(2);
 
                 temp.seg = seg;
@@ -1635,29 +1617,26 @@ export default {
                       ).detailedName
                     );
 
-                    var a = data.data[
-                      i
-                    ].offerItems[0].services[1].segments[
-                      j
-                    ].flightSegment.departure.at
+                    var a =
+                      data.data[i].offerItems[0].services[1].segments[j]
+                        .flightSegment.departure.at;
 
-                                                          var zone = " AM";
+                    var zone = " AM";
 
-                  var b = a
-                    .split("T")
-                    ["1"].split("-")
-                    ["0"].split(":");
+                    var b = a
+                      .split("T")
+                      ["1"].split("-")
+                      ["0"].split(":");
 
-                  if (b[0] > 12) {
-                    b[0] = b[0] - 12;
-                    if(b[0] < 10){
-                      b[0] = "0" + b[0].toString()
+                    if (b[0] > 12) {
+                      b[0] = b[0] - 12;
+                      if (b[0] < 10) {
+                        b[0] = "0" + b[0].toString();
+                      }
+                      zone = " PM";
                     }
-                    zone = " PM"
-                  }
-                  
-                  tmp.round_dep_time = b.slice(0, 2).join(":") + zone
 
+                    tmp.round_dep_time = b.slice(0, 2).join(":") + zone;
 
                     tmp.round_destination =
                       data.data[i].offerItems[0].services[1].segments[
@@ -1672,33 +1651,25 @@ export default {
                       ).detailedName
                     );
 
+                    var a =
+                      data.data[i].offerItems[0].services[1].segments[j]
+                        .flightSegment.arrival.at;
 
- 
-                  var a =  data.data[
-                      i
-                    ].offerItems[0].services[1].segments[
-                      j
-                    ].flightSegment.arrival.at
+                    var zone = " AM";
 
-                  var zone = " AM";
-                  
-                  var b = a
-                    .split("T")
-                    ["1"].split("-")
-                    ["0"].split(":");
+                    var b = a
+                      .split("T")
+                      ["1"].split("-")
+                      ["0"].split(":");
 
-                  if (b[0] > 12) {
-                    b[0] = b[0] - 12;
-                    if(b[0] < 10){
-                      b[0] = "0" + b[0].toString()
+                    if (b[0] > 12) {
+                      b[0] = b[0] - 12;
+                      if (b[0] < 10) {
+                        b[0] = "0" + b[0].toString();
+                      }
+                      zone = " PM";
                     }
-                    zone = " PM"
-                  }
-                  tmp.round_arr_time = b.slice(0, 2).join(":") + zone
-
-
-
-
+                    tmp.round_arr_time = b.slice(0, 2).join(":") + zone;
 
                     tmp.round_flight_number =
                       data.data[i].offerItems[0].services[1].segments[
@@ -1757,13 +1728,11 @@ export default {
                     ).detailedName
                   );
 
-                  var a = data.data[
-                    i
-                  ].offerItems[0].services[1].segments[0].flightSegment.departure.at
+                  var a =
+                    data.data[i].offerItems[0].services[1].segments[0]
+                      .flightSegment.departure.at;
 
-
-                    
-                                                          var zone = " AM";
+                  var zone = " AM";
 
                   var b = a
                     .split("T")
@@ -1772,14 +1741,13 @@ export default {
 
                   if (b[0] > 12) {
                     b[0] = b[0] - 12;
-                    if(b[0] < 10){
-                      b[0] = "0" + b[0].toString()
+                    if (b[0] < 10) {
+                      b[0] = "0" + b[0].toString();
                     }
-                    zone = " PM"
+                    zone = " PM";
                   }
-                  
-                  temp.round_dep_time = b.slice(0, 2).join(":") + zone
-                    
+
+                  temp.round_dep_time = b.slice(0, 2).join(":") + zone;
 
                   temp.round_destination =
                     data.data[i].offerItems[0].services[1].segments[
@@ -1796,16 +1764,13 @@ export default {
                     ).detailedName
                   );
 
-                  temp.round_arr_time = data.data[
-                    i
-                  ].offerItems[0].services[1].segments[
-                    data.data[i].offerItems[0].services[1].segments.length - 1
-                  ].flightSegment.arrival.at
+                  temp.round_arr_time =
+                    data.data[i].offerItems[0].services[1].segments[
+                      data.data[i].offerItems[0].services[1].segments.length - 1
+                    ].flightSegment.arrival.at;
 
-
-                  
                   var zone = " AM";
-                  
+
                   var b = a
                     .split("T")
                     ["1"].split("-")
@@ -1813,23 +1778,20 @@ export default {
 
                   if (b[0] > 12) {
                     b[0] = b[0] - 12;
-                    if(b[0] < 10){
-                      b[0] = "0" + b[0].toString()
+                    if (b[0] < 10) {
+                      b[0] = "0" + b[0].toString();
                     }
-                    zone = " PM"
+                    zone = " PM";
                   }
-                  temp.round_arr_time = b.slice(0, 2).join(":") + zone
+                  temp.round_arr_time = b.slice(0, 2).join(":") + zone;
 
-
-                                  var a =  data.data[
-                    i
-                  ].offerItems[0].services[1].segments[
-                    data.data[i].offerItems[0].services[1].segments.length - 1
-                  ].flightSegment.arrival.at
-
+                  var a =
+                    data.data[i].offerItems[0].services[1].segments[
+                      data.data[i].offerItems[0].services[1].segments.length - 1
+                    ].flightSegment.arrival.at;
 
                   var zone = " AM";
-                  
+
                   var b = a
                     .split("T")
                     ["1"].split("-")
@@ -1837,17 +1799,18 @@ export default {
 
                   if (b[0] > 12) {
                     b[0] = b[0] - 12;
-                    if(b[0] < 10){
-                      b[0] = "0" + b[0].toString()
+                    if (b[0] < 10) {
+                      b[0] = "0" + b[0].toString();
                     }
-                    zone = " PM"
+                    zone = " PM";
                   }
-                  temp.round_arr_time = b.slice(0, 2).join(":") + zone
+                  temp.round_arr_time = b.slice(0, 2).join(":") + zone;
 
                   temp.round_price =
                     data.data[i].offerItems[0].pricePerAdult.total -
                     parseFloat(
-                      (this.disc / 100) * data.data[i].offerItems[0].pricePerAdult.total
+                      (this.disc / 100) *
+                        data.data[i].offerItems[0].pricePerAdult.total
                     ).toFixed(2);
 
                   temp.round_seg = round_seg;
@@ -2350,8 +2313,10 @@ export default {
     getSortedData: function(data, isAsc) {
       return data.sort((a, b) => {
         return (
-          (a.offerItems[0].pricePerAdult.total < b.offerItems[0].pricePerAdult.total ? -1 : 1) *
-          (isAsc ? 1 : -1)
+          (a.offerItems[0].pricePerAdult.total <
+          b.offerItems[0].pricePerAdult.total
+            ? -1
+            : 1) * (isAsc ? 1 : -1)
         );
       });
     },

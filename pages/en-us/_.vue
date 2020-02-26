@@ -682,7 +682,7 @@
                           style="width: 50px;height: 100%;object-fit: contain;"
                           src="~static/call-now.jpg"
                         />
-                        <p class="flight__phone">1-888-454-1363</p>
+                        <p class="flight__phone">+1-888-454-1363</p>
                       </div>
                       <a
                         class="btn"
@@ -804,7 +804,7 @@
                       style="width: 50px;height: 100%;object-fit: contain;"
                       src="~static/call-now.jpg"
                     />
-                    <p class="flight__phone">1-888-454-1363</p>
+                    <p class="flight__phone">+1-888-454-1363</p>
                   </div>
                   <a
                     class="btn"

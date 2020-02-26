@@ -22,7 +22,7 @@
           <div style="display: flex;flex-direction:column;justify-content: center;">
             <div style="display:flex;align-items:baseline;white-space: nowrap;">
               <img style="height:12px;padding-right:10px" src="~static/call-answer.svg" />
-              <a style="color:white" class="telephone" href="tel:+1-8882010212">+1-888-201-0212</a>
+              <a style="color:white" class="telephone" href="tel:+1-8884541363">+1-888-454-1363</a>
             </div>
             <span style="font-size:12px;text-align:right">Toll free – 24 X 7</span>
           </div>

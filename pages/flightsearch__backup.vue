@@ -67,7 +67,7 @@
             <p
               style="padding-bottom:10px"
             >Call the below Toll free Number to confirm your booking at the lowest fare</p>
-            <p style="color:black;font-weight:bold">+1-888-201-0212</p>
+            <p style="color:black;font-weight:bold">+1-888-454-1363</p>
           </div>
         </div>
       </div>
@@ -654,8 +654,8 @@
                     <p style="font-size:12px;font-style:italic;color:#515151;font-family:'Manjari'">
                       Seems not found what you are looking for ? Call Now For Dirt Cheap Fares
                       <a
-                        href="tel:+1-888-201-0212"
-                      >+1-888-201-0212</a>
+                        href="tel:+1-888-454-1363"
+                      >+1-888-454-1363</a>
                     </p>
                   </div>
                   <div v-if="isInternationDep == 1">
@@ -665,8 +665,8 @@
                     <p style="font-size:12px;font-style:italic;color:#515151;font-family:'Manjari'">
                       Seems not found what you are looking for ? Call Now For Dirt Cheap Fares
                       <a
-                        href="tel:+1-888-201-0212"
-                      >+1-888-201-0212</a>
+                        href="tel:+1-888-454-1363"
+                      >+1-888-454-1363</a>
                     </p>
                   </div>
                   <p class="show_flight" @click="showDetail(index)">Flight Details</p>

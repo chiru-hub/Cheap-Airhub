@@ -72,7 +72,7 @@
               Call the below Toll free Number to confirm your booking at the
               lowest fare
             </p>
-            <p style="color:black;font-weight:bold">+1-888-201-0212</p>
+            <p style="color:black;font-weight:bold">+1-888-454-1363</p>
           </div>
         </div>
       </div>
@@ -581,8 +581,7 @@
           <p style="text-align:center;">No flight found</p>
         </div>
 
-
-       <div class="row">
+        <div class="row">
           <div class="col s24">
             <div id="amadeus">
               <div class="card oneseg" v-for="(p, index) in amadeus" :key="p.id">
@@ -1081,9 +1080,9 @@ export default {
   }),
 
   mounted() {
-    $(".telephone").attr("href", "tel:+1-888-201-0212");
+    $(".telephone").attr("href", "tel:+1-888-454-1363");
 
-    $(".telephone").html("+1-888-201-0212");
+    $(".telephone").html("+1-888-454-1363");
 
     var second_part = this.$route.query;
 
@@ -1972,13 +1971,15 @@ export default {
                   zone = " PM";
                 }
                 temp.arr_time = b.slice(0, 2).join(":") + zone;
-                
+
                 temp.og_price = data.data[i].offerItems[0].pricePerAdult.total;
 
-                temp.price =  temp.og_price - parseFloat(
-                  (this.disc / 100) *
-                    data.data[i].offerItems[0].pricePerAdult.total
-                );
+                temp.price =
+                  temp.og_price -
+                  parseFloat(
+                    (this.disc / 100) *
+                      data.data[i].offerItems[0].pricePerAdult.total
+                  );
 
                 temp.price = temp.price + (5 / 100) * temp.price;
 
@@ -2221,7 +2222,6 @@ export default {
                   }
                   temp.round_arr_time = b.slice(0, 2).join(":") + zone;
 
-
                   temp.round_og_price =
                     data.data[i].offerItems[0].pricePerAdult.total;
 
@@ -2232,10 +2232,12 @@ export default {
                   //       data.data[i].offerItems[0].pricePerAdult.total
                   //   ).toFixed(2);
 
-                  temp.round_price =  temp.round_og_price - parseFloat(
-                    (this.disc / 100) *
-                      data.data[i].offerItems[0].pricePerAdult.total
-                  );
+                  temp.round_price =
+                    temp.round_og_price -
+                    parseFloat(
+                      (this.disc / 100) *
+                        data.data[i].offerItems[0].pricePerAdult.total
+                    );
 
                   temp.round_price =
                     temp.round_price - (5 / 100) * temp.round_price;

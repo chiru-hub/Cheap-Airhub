@@ -685,9 +685,11 @@
 
     <div style="background-color:#03A9F4">
       <div class="container section">
-        <div style=" display:flex; justify-content:space-between; height: 120px;line-height: 120px;">
+        <div
+          style=" display:flex; justify-content:space-between; height: 120px;line-height: 120px;"
+        >
           <h3 style="color:white">Call For Unpublished Cheap Flight Deals</h3>
-          <h3 style="color:white">Toll Free no: +1-888-201-0212</h3>
+          <h3 style="color:white">Toll Free no: +1-888-454-1363</h3>
         </div>
       </div>
     </div>
@@ -730,7 +732,6 @@ export default {
 
   mounted() {
     this.getToken();
-
 
     var dp = $(".datepicker-here")
       .datepicker({
@@ -879,17 +880,16 @@ export default {
       this.amadeus = [];
 
       if (this.source == "amadeus") {
-
-        this.origin =  localStorage.getItem('to');
-        this.destination =  localStorage.getItem('from');
-        this.departureDate =  localStorage.getItem('departure');
-        this.returnDate =  localStorage.getItem('return');
-        this.adults =  localStorage.getItem('adult');
-        this.children =  localStorage.getItem('children');
-        this.infants =  localStorage.getItem('infants');
+        this.origin = localStorage.getItem("to");
+        this.destination = localStorage.getItem("from");
+        this.departureDate = localStorage.getItem("departure");
+        this.returnDate = localStorage.getItem("return");
+        this.adults = localStorage.getItem("adult");
+        this.children = localStorage.getItem("children");
+        this.infants = localStorage.getItem("infants");
         this.nonStop = false;
         this.currency = "USD";
-        this.travelClass =  localStorage.getItem('travel_class' );
+        this.travelClass = localStorage.getItem("travel_class");
 
         var url = "";
 
@@ -1310,7 +1310,8 @@ export default {
                   .slice(0, 2)
                   .join(":");
 
-                temp.round_price = data.data[i].offerItems[0].pricePerAdult.total;
+                temp.round_price =
+                  data.data[i].offerItems[0].pricePerAdult.total;
 
                 temp.round_seg = round_seg;
               }
@@ -1795,7 +1796,8 @@ export default {
     getSortedData: function(data, isAsc) {
       return data.sort((a, b) => {
         return (
-          (a.offerItems[0].pricePerAdult.total < b.offerItems[0].pricePerAdult.total &&
+          (a.offerItems[0].pricePerAdult.total <
+            b.offerItems[0].pricePerAdult.total &&
           a.offerItems[0].services[0].segments[0].flightSegment.departure ==
             $("#from_iata").val()
             ? -1
@@ -1846,7 +1848,9 @@ export default {
     getAirport: function(e) {
       axios({
         method: "POST",
-        url: "http://localhost/api/api.php?search=search&query=" + $("#from_des").val(),
+        url:
+          "http://localhost/api/api.php?search=search&query=" +
+          $("#from_des").val(),
         headers: {
           "Access-Control-Allow-Origin": "*"
         }

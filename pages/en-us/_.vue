@@ -3062,6 +3062,9 @@ export default {
 .airportName {
   font-size: 14px;
   color: rgb(74, 74, 74);
+  text-overflow: ellipsis;
+  height: 20px;
+  white-space: pre-line;
 }
 
 .datepickerstyle {

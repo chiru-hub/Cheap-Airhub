@@ -400,9 +400,6 @@ label {
 .makemytrip-border label,
 .airportName {
   text-align: left;
-  text-overflow: ellipsis;
-  height: 20px;
-  white-space: pre-line;
 }
 
 input[type="text"],
